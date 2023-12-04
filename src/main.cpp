@@ -30,9 +30,9 @@ void setup() {
 void loop() {
   // Toggle the SSR
   digitalWrite(SSR_PIN, HIGH); // Turn the SSR on
-  delay(1000);                // Wait for 1 second
+  delay(10);                // Wait for .01 second
   digitalWrite(SSR_PIN, LOW);  // Turn the SSR off
-  delay(1000);                // Wait for 1 second
+  delay(10);                // Wait for .01 second
 
   // Read temperature from the MAX6675s
   Serial.print("Thermocouple 1 - F = ");
@@ -49,8 +49,7 @@ void loop() {
 
   Serial.println("");
   Serial.println("");
-  // ... Repeat for additional thermocouples
 
   // For the MAX6675 to update, you must delay AT LEAST 250ms between reads
-  delay(500);
+  delay(250);
 }
